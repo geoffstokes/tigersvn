@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>TigerSVN Project</title>
+	<link rel="stylesheet" type="text/css" href="css/tsvn.css" />
+</head>
+<body>
+	<div class="centre body720">
+		<h1>TigerSVN</h1>
+		<span class="menu">Mac OS Subversion Notification Script <a href="https://github.com/geoffstokes/TigerSVN/">Fork on GitHub</a></span>
+		<dl class="table-display">
+			<lh>TigerSVN Project</lh>
+			<dt>Project Name</dt>
+				<dd>TigerSVN</dd>
+			<dt>Goal</dt>
+				<dd>Provide automated Growl notification for Subversion updates on Mac OS X.</dd>
+			<dt>Language</dt>
+				<dd>Bash Script</dd>
+			<dt>Prerequisites</dt>
+				<dd>
+					Mac OS X
+					<ul>
+						<li>"svn" Command-line Client</li>
+						<li>Growl Notification System</li>
+					</ul>
+					Linux
+					<ul>
+						<li>"svn" Command-line Client</li>
+						<li>Notification Daemon (Ubuntu Desktop Notifications)</li>
+					</ul>
+					<i>Note that Mac OS X is the only platform which has been tested. Linux support may not work, or may be partially missing. If you are on Linux, and have additional notification daemons you want added, or information on making it better, please email me.</i>
+				</dd>
+			<dt>Instructions</dt>
+				<dd>
+					<ol>
+						<li><a href="tigersvn-latest.sh">Download</a> the TigerSVN script</li>
+						<li>Move the script to a convenient location (your home directory, or bin directory would be appropriate)</li>
+						<li>Edit the script (in your favourite text editor) and find this section;
+							<code>SVN_ROOT="/Users/geoffstokes/svn"</code>
+							Edit the text between the "" to be the path to your SVN repository folder.</li>
+						<li>
+							Make the script executable;
+							<code>chmod +x tigersvn.sh</code>
+						</li>
+						<li>Test the script to make sure there are no errors (Sorry, there is next to no actual error handling in the script currently. There shouldn't be any issues for a standard setup, though.)
+							<code># For bash users:<br/>
+								./tigersvn.sh<br/>
+								<br/>
+								# For most other shell users:<br/>
+								sh tigersvn.sh<br/>
+							</code>
+							Assuming the script is configured correctly, you should get output containing the files which have been modified, and at the end, a Growl (or Notification-Daemon) notification.
+						</li>
+						<li>If all is well, then we can add an entry to our crontab (or similar scheduler) schedule. Mine is as follows;
+							<code>
+								0 * * * mon,tue,wed,thu,fri,sat /Users/geoffstokes/tigersvn.sh
+							</code>
+							This causes TigerSVN to poll every hour for changes. You can of course set it to run more or less frequently, depending on your needs.<br/>
+							(Note that this should be on one line. Consult the documentation regarding your scheduling software for more information)
+						</li>
+					</ol>
+				</dd>
+		</dl>
+		<p class="footer">Site Design &copy;2010 Geoff Stokes. Project is CC-BY-SA 3.0 Licensed. Site under construction.</p>
+	</div>
+</body>
+</html>

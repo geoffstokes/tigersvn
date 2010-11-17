@@ -1,0 +1,119 @@
+body {
+	font-family:						"Helvetica Neue",
+										Helvetica,
+										Arial,
+										sans-serif;
+}
+.centre {
+	margin:								0 auto;
+}
+
+.body720 {
+	width:								720px;
+}
+
+h1 {
+	margin-bottom:						0px;
+	text-shadow:						0px 1px 0px #ccc;
+	display:							inline;
+}
+
+span.menu {
+	padding-bottom:						10px;
+	color:								#ccc;
+	font-size:							0.8em;
+	text-transform:						uppercase;
+}
+
+.menu a {
+	color:								#ccc;
+	text-decoration:					none;
+	padding-right:						5px;
+	padding-left:						5px;
+}
+
+.menu a:hover {
+	color:								#333;
+}
+
+.menu:first-child {
+	border-left:						1px solid #000;
+}
+
+dl.table-display
+{
+	float:								left;
+	width:								720px;
+	margin:								0;
+	margin-bottom:						10px;
+	margin-top:							6px;
+	padding:							0;
+	border-bottom:						1px solid #999;
+	border-radius:						5px;
+	-webkit-border-radius:				5px;
+	-moz-border-radius:					5px;
+}
+
+.table-display lh {
+	float:								left;
+	width:								700px;
+	font-weight:						bold;
+	padding:							10px;
+	text-transform:						uppercase;
+	letter-spacing:						2px;
+	text-shadow:						0px 1px 0px #ccc;
+	-webkit-border-top-left-radius:		5px;
+	-webkit-border-top-right-radius:	5px;
+	-moz-border-top-left-radius:		5px;
+	-moz-border-top-right-radius:		5px;
+	border-top-left-radius:				5px;
+	border-top-right-radius:			5px;
+	background:							#C5C5C5; /* for non-css3 browsers */
+	filter:								progid:DXImageTransform.Microsoft.gradient(startColorstr='#C5C5C5', endColorstr='#969696'); /* for IE */
+	background:							-webkit-gradient(
+	    									linear,
+										    left bottom,
+										    left top,
+										    color-stop(0, rgb(150,150,150)),
+										    color-stop(0.85, rgb(196,196,196))
+										); /* for webkit browsers */
+	background:							-moz-linear-gradient(
+										    center bottom,
+										    rgb(150,150,150) 0%,
+										    rgb(196,196,196) 85%
+										); /* for firefox 3.6+ */
+}
+
+.table-display dt
+{
+	clear:								left;
+	float:								left;
+	width:								200px;
+	margin:								0;
+	padding:							5px;
+	border-top:							1px solid #999;
+	font-weight:						bold;
+}
+
+.table-display dd
+{
+	float:								left;
+	width:								500px;
+	margin:								0;
+	padding:							5px;
+	border-top:							1px solid #999;
+}
+
+.footer {
+	text-transform:						uppercase;
+	color:								#ccc;
+	font-size:							0.8em;
+}
+
+code {
+	display:							block;
+	background-color:					#eee;
+	border:								1px dashed #ccc;
+	padding:							5px;
+	margin:								3px;
+}
