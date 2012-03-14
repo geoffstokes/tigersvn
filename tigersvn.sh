@@ -2,14 +2,14 @@
 
 # 
 # TigerSVN SVN Monitoring Shell Script
-# Version 1.2 - Last Updated 17 November 2010
+# Version 1.2.1 - Last Updated 1 March 2011
 # 2010 Geoff Stokes - Email: tigersvn@geoffstokes.net
 # 
 # Licensed under the terms of the CC-BY-SA 3.0 license:
 # 	http://creativecommons.org/licenses/by-sa/3.0/
 # 
 
-VERSION=1.2
+VERSION=1.2.1
 MESSAGE=
 platform='unknown'
 unamestr=`uname`
@@ -35,7 +35,7 @@ for file in $SVN_ROOT/* ; do
 	fi
 done
 
-if [ -n $MESSAGE ]; then
+if [ -n "$MESSAGE" ]; then
 	if [ "$platform" == "darwin" ]; then
 		/usr/local/bin/growlnotify "TigerSVN: Changes Detected" --sticky -m "Unsynced changes in;$MESSAGE"$'\n'"An SVN Update is recommended." --name tigersvn
 	elif [ "$plaform" == "linux" ]; then
